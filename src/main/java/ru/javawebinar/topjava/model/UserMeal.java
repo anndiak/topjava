@@ -26,4 +26,7 @@ public class UserMeal {
     public int getCalories() {
         return calories;
     }
+    public String getDate(){
+        return getDateTime().getYear()+"-"+getDateTime().getMonth()+"-"+getDateTime().getDayOfMonth();
+    }
 }
