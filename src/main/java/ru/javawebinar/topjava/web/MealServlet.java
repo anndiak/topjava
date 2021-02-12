@@ -19,8 +19,7 @@ public class MealServlet extends HttpServlet {
     private MealRepository mealRepository;
 
     @Override
-    public void init(ServletConfig servletConfig) throws ServletException {
-        super.init(servletConfig);
+    public void init() throws ServletException {
         mealRepository = new MealRepositoryImpl();
     }
 
