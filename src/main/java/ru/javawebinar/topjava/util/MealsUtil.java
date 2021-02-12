@@ -46,5 +46,7 @@ public class MealsUtil {
     private static MealTo createTo(Meal meal, boolean excess) {
         return new MealTo(meal.getDateTime(), meal.getDescription(), meal.getCalories(), excess);
     }
-
+    public static List<MealTo> getAllMeals(List<Meal> meals,int CALORIES_PER_DAY){
+        return filteredByStreams(meals,LocalTime.MIN,LocalTime.MAX,CALORIES_PER_DAY);
+    }
 }
