@@ -4,6 +4,7 @@ import ru.javawebinar.topjava.model.Meal;
 import ru.javawebinar.topjava.model.MealTo;
 import ru.javawebinar.topjava.util.MealsUtil;
 
+import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -15,6 +16,11 @@ public class MealRepositoryImpl implements MealRepository{
         for(Meal meal : MealsUtil.meals){
             saveMeal(meal);
         }
+    }
+
+    @Override
+    public Collection<Meal> getAll() {
+        return map.values();
     }
 
     @Override

@@ -6,6 +6,7 @@ import ru.javawebinar.topjava.repository.MealRepository;
 import ru.javawebinar.topjava.repository.MealRepositoryImpl;
 import ru.javawebinar.topjava.util.MealsUtil;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,8 +19,8 @@ public class MealServlet extends HttpServlet {
     private MealRepository mealRepository;
 
     @Override
-    public void init() throws ServletException {
-        super.init();
+    public void init(ServletConfig servletConfig) throws ServletException {
+        super.init(servletConfig);
         mealRepository = new MealRepositoryImpl();
     }
 
