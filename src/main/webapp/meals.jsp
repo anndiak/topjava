@@ -9,7 +9,7 @@
 <h3><a href="index.html">Home</a></h3>
 <hr>
 <h2>Meals</h2>
-<p><a href="MealServlet?action=insert">Add User</a></p>
+<p><a href="meals?action=insert">Add User</a></p>
 <table border=1 cellpadding="8" cellspacing="0">
     <thead>
     <tr>
@@ -28,8 +28,8 @@
             </td>
             <td><c:out value="${meal.description}" /></td>
             <td><c:out value="${meal.calories}" /></td>
-            <td><a href="MealServlet?action=edit&mealId=<c:out value="${meal.id}"/>">Update</a></td>
-            <td><a href="MealServlet?action=delete&mealId=<c:out value="${meal.id}"/>">Delete</a></td>
+            <td><a href="meals?action=edit&mealId=<c:out value="${meal.id}"/>">Update</a></td>
+            <td><a href="meals?action=delete&mealId=<c:out value="${meal.id}"/>">Delete</a></td>
         </tr>
     </c:forEach>
     </tbody>
